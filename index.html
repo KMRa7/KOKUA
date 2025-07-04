@@ -588,8 +588,6 @@
             <button type="button" class="five" onclick="selectfive(this)">アイブロウ</button>
             <button type="button" class="five" onclick="selectfive(this)">まつげパーマ</button>
             <button type="button" class="five" onclick="selectfive(this)">まつげエクステ</button>
-            <button type="button" class="five" onclick="selectfive(this)">パリジェンヌラッシュリフト</button>
-            <button type="button" class="five" onclick="selectfive(this)">ハリウッドアイブロウ</button>
         </div>
 
         <div class="label"><span class="required">必須</span>眉毛の自己処理方法を教えてください</div>
@@ -722,23 +720,27 @@
         }
 
         function selecttwo(element) {
-            // 単一選択項目の処理コード
-            const buttons = document.querySelectorAll('.two-buttons button');
-            buttons.forEach(button => button.classList.remove('active'));
+            // すでに active クラスが付いていれば外し、付いていなければ追加する（トグル）
+            element.classList.toggle('active');
 
-            // 選択されたボタンだけにactiveクラスを追加
-            element.classList.add('active');
-            twoCount = element.innerText;
+            // 選択されているすべてのボタンのテキストを取得して配列にする
+            const activeButtons = document.querySelectorAll('.two-buttons button.active');
+            const selectedtwos = Array.from(activeButtons).map(button => button.innerText);
+
+            // 必要に応じて選択された内容を格納
+            twoCount = selectedtwos;  // 配列として保持
         }
 
         function selectthree(element) {
-            // 単一選択項目の処理コード
-            const buttons = document.querySelectorAll('.three-buttons button');
-            buttons.forEach(button => button.classList.remove('active'));
+            // すでに active クラスが付いていれば外し、付いていなければ追加する（トグル）
+            element.classList.toggle('active');
 
-            // 選択されたボタンだけにactiveクラスを追加
-            element.classList.add('active');
-            threeCount = element.innerText;
+            // 選択されているすべてのボタンのテキストを取得して配列にする
+            const activeButtons = document.querySelectorAll('.three-buttons button.active');
+            const selectedthrees = Array.from(activeButtons).map(button => button.innerText);
+
+            // 必要に応じて選択された内容を格納
+            threeCount = selectedthrees;  // 配列として保持
         }
 
         function selectfour(element) {
@@ -752,34 +754,39 @@
         }
 
         function selectfive(element) {
-            // 単一選択項目の処理コード
-            const buttons = document.querySelectorAll('.five-buttons button');
-            buttons.forEach(button => button.classList.remove('active'));
+            // すでに active クラスが付いていれば外し、付いていなければ追加する（トグル）
+            element.classList.toggle('active');
 
-            // 選択されたボタンだけにactiveクラスを追加
-            element.classList.add('active');
-            fiveCount = element.innerText;
+            // 選択されているすべてのボタンのテキストを取得して配列にする
+            const activeButtons = document.querySelectorAll('.five-buttons button.active');
+            const selectedfives = Array.from(activeButtons).map(button => button.innerText);
+
+            // 必要に応じて選択された内容を格納
+            fiveCount = selectedfives;  // 配列として保持
         }
-        
+
         function selectsix(element) {
-            // 単一選択項目の処理コード
-            const buttons = document.querySelectorAll('.six-buttons button');
-            buttons.forEach(button => button.classList.remove('active'));
+            // すでに active クラスが付いていれば外し、付いていなければ追加する（トグル）
+            element.classList.toggle('active');
 
-            // 選択されたボタンだけにactiveクラスを追加
-            element.classList.add('active');
-            sixCount = element.innerText;
+            // 選択されているすべてのボタンのテキストを取得して配列にする
+            const activeButtons = document.querySelectorAll('.six-buttons button.active');
+            const selectedsixs = Array.from(activeButtons).map(button => button.innerText);
+
+            // 必要に応じて選択された内容を格納
+            sixCount = selectedsixs;  // 配列として保持
         }
-
 
         function selectseven(element) {
-            // 単一選択項目の処理コード
-            const buttons = document.querySelectorAll('.seven-buttons button');
-            buttons.forEach(button => button.classList.remove('active'));
+            // すでに active クラスが付いていれば外し、付いていなければ追加する（トグル）
+            element.classList.toggle('active');
 
-            // 選択されたボタンだけにactiveクラスを追加
-            element.classList.add('active');
-            sevenCount = element.innerText;
+            // 選択されているすべてのボタンのテキストを取得して配列にする
+            const activeButtons = document.querySelectorAll('.seven-buttons button.active');
+            const selectedsevens = Array.from(activeButtons).map(button => button.innerText);
+
+            // 必要に応じて選択された内容を格納
+            sevenCount = selectedsevens;  // 配列として保持
         }
 
         function selecteight(element) {
@@ -803,13 +810,15 @@
         }
 
         function selectten(element) {
-            // 単一選択項目の処理コード
-            const buttons = document.querySelectorAll('.ten-buttons button');
-            buttons.forEach(button => button.classList.remove('active'));
+            // すでに active クラスが付いていれば外し、付いていなければ追加する（トグル）
+            element.classList.toggle('active');
 
-            // 選択されたボタンだけにactiveクラスを追加
-            element.classList.add('active');
-            tenCount = element.innerText;
+            // 選択されているすべてのボタンのテキストを取得して配列にする
+            const activeButtons = document.querySelectorAll('.ten-buttons button.active');
+            const selectedtens = Array.from(activeButtons).map(button => button.innerText);
+
+            // 必要に応じて選択された内容を格納
+            tenCount = selectedtens;  // 配列として保持
         }
 
         function selecteleven(element) {
@@ -843,15 +852,17 @@
         }
 
         function selectfourteen(element) {
-            // 単一選択項目の処理コード
-            const buttons = document.querySelectorAll('.fourteen-buttons button');
-            buttons.forEach(button => button.classList.remove('active'));
+            // すでに active クラスが付いていれば外し、付いていなければ追加する（トグル）
+            element.classList.toggle('active');
 
-            // 選択されたボタンだけにactiveクラスを追加
-            element.classList.add('active');
-            fourteenCount = element.innerText;
+            // 選択されているすべてのボタンのテキストを取得して配列にする
+            const activeButtons = document.querySelectorAll('.fourteen-buttons button.active');
+            const selectedfourteens = Array.from(activeButtons).map(button => button.innerText);
+
+            // 必要に応じて選択された内容を格納
+            fourteenCount = selectedfourteens;  // 配列として保持
         }
-
+        
         //見た目変更した際に不要な物は消す！
         function submitForm() {
             const message = document.getElementById('message').value;
